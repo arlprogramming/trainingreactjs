@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Storage</title>
+  </head>
+  <body>
+    <!-- WebStorage ada :
+    - localStorage => Menyimpan didalam local Storage
+    - sessionStorage => Menyimpan di session storage
+    -->
+
+    <h1>Local Storage!</h1>
+    <h2>Sesion Storage!</h2>
+
+    <a href="" onclick="gantiNama()">Ganti Nama</a>
+    <script>
+      //---------------------------------------------- CONTOH 1 ------------------------------------------------------------------
+      const judul = document.querySelector("h1");
+
+      //mengambil data yg ada di local storage
+      let localstorage = localStorage.getItem("localstorage");
+
+      if (!localstorage) {
+        localstorage = prompt("Masukkan localstorage : ");
+        //memasukkan data ke localstorage
+        localStorage.setItem("localstorage", localstorage);
+      }
+
+      judul.innerHTML = `Halo, ${localstorage}, -> Ketika di reload atau di close tab tidak akan hilang datanya`;
+
+      //-------------------------------------------------------//
+      const judul1 = document.querySelector("h2");
+
+      //mengambil data yg ada di sessionStorage
+      let sessionstorage = sessionStorage.getItem("sessionstorage");
+
+      if (!sessionstorage) {
+        sessionstorage = prompt("Masukkan sessionstorage : ");
+        //memasukkan data ke sessionStorage
+        sessionStorage.setItem("sessionstorage", sessionstorage);
+      }
+
+      judul1.innerHTML = `Halo, ${sessionstorage}, -> Ketika di close tab akan hilang datanya`;
+
+      //---------------------------------------------- CONTOH 2 ------------------------------------------------------------------
+
+      const gantiNama = (e) => {
+        localstorage = prompt("Masukkan localstorage baru : ");
+        localStorage.setItem("localstorage", localstorage);
+        e.preventDefault();
+      };
+    </script>
+  </body>
+</html>

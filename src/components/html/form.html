@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <!-- mengelola data yang sudah diinput -->
+    <!-- ada input,textarea,select,button,label -->
+    <form action="">
+      <table border="0" cellspacing="0" cellpadding="5" style="text-align: center;">
+        <tr>
+          <td><label for="username">Username :</label></td>
+          <td><input type="text" id="username" /></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password :</label></td>
+          <td><input type="password" id="password" /></td>
+        </tr>
+        <tr style="text-align: left;">
+          <td colspan="2">
+            <!-- supaya bisa dipilih salah satu dari type radia gunakan name sebagai groupnya -->
+            <input type="radio" id="pria" name="janiskelamin" /><label
+              for="pria"
+              >Pria</label
+            >
+            <input type="radio" id="wanita" name="janiskelamin" /><label
+              for="wanita"
+              >Wanita</label
+            >
+          </td>
+        </tr>
+        <tr style="text-align: left;">
+          <td colspan="2">
+            
+            <input type="checkbox" id="olahraga" /><label for="olahraga"
+              >Olahraga</label
+            >
+            <input type="checkbox" id="coding" /><label for="coding"
+              >Coding</label
+            >
+            <select name="" id="">
+              <option value="">All</option>
+              <option value="">Basketball</option>
+              <option value="">Futsal</option>
+              <option value="">Renang</option>
+            </select>
+          </td>
+          <tr>
+            <td colspan="2" ><textarea name="" id="" cols="30" rows="10"></textarea></td>
+          </tr>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="submit" style="width: 100%; Background-color : blue; color:white">Kirim</button></td>
+        </tr>
+      </table>
+
+    
+  </body>
+</html>

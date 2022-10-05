@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      form {
+        width: 600px;
+        padding: 20px;
+      }
+
+      form div {
+        margin: 10px;
+      }
+
+      label {
+        display: block;
+      }
+    </style>
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <!-- HTML5 Input Types :
+    - email
+    - tel
+    - url
+    - number
+    - range => untuk membuat slider
+    - datetime picker
+    - color picker -->
+
+    <!-- HTML5 Input Attribute :
+    - autocomplete (input,form) -> menghilangkan history input
+    - autofocus => membuat cursornya automatis ke input tsb
+    - required -> harus diinput
+    - minlength & maxlength -> menentukan karakter yang ditentukan
+    - min & max -> untuk menentukan nilai
+    - step -> untuk penambahan setiap klik tanda panah -->
+
+    <form action="" method="post">
+      <div>
+        <label for="nama">Masukkan Nama</label>
+        <input type="text" name="nama" id="nama" autocomplete="off" />
+      </div>
+      <div>
+        <label for="email">Masukkan Email</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div>
+        <label for="nohp">Masukkan No Hp</label>
+        <input type="tel" name="nohp" id="nohp" />
+      </div>
+      <div>
+        <label for="website">Masukkan URL Website</label>
+        <input type="url" name="website" id="website" />
+      </div>
+      <div>
+        <label for="angka">Masukkan Angka</label>
+        <input type="number" name="angka" id="angka" />
+      </div>
+      <div>
+        <label for="slider">Masukkan Angka</label>
+        <input type="range" name="slider" id="slider" />
+      </div>
+      <div>
+        <label for="tanggal">Masukkan Tanggal</label>
+        <!-- untuk type : date,time,week,month -->
+        <input type="date" name="tanggal" id="tanggal" />
+      </div>
+      <div>
+        <label for="warna">Masukkan Warna</label>
+        <input type="color" name="warna" id="warna" />
+        <span id="hexa"></span>
+      </div>
+      <div>
+        <label for="kodepos">Masukkan KodePos</label>
+        <input
+          type="text"
+          name="kodepos"
+          id="kodepos"
+          pattern="^([1-9])[0-9]{4}$"
+        />
+        <!-- angka pertama 1-9 angka kedua 1-9 diulang 4x -->
+      </div>
+      <div>
+        <button type="submit">Kirim!</button>
+      </div>
+    </form>
+
+    <script>
+      const warna = document.querySelector("#warna");
+      const hexa = document.querySelector("#hexa");
+
+      hexa.innerHTML = warna.value;
+      warna.addEventListener("input", () => {
+        hexa.innerHTML = warna.value;
+        hexa.style.color = warna.value;
+      });
+    </script>
+  </body>
+</html>
