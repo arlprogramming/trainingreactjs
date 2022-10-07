@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Storage</title>
+    <style>
+      a {
+        color: inherit;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <!-- WebStorage ada :
@@ -15,43 +24,89 @@
     <h1>Local Storage!</h1>
     <h2>Sesion Storage!</h2>
 
-    <a href="" onclick="gantiNama()">Ganti Nama</a>
+    <!-- <a href="" onclick="gantiNama()">Ganti Nama</a>
+    <a class="btn btn-primary" onclick="hapuslocstorage()">
+      Hapus localStorage
+    </a>
+    <a class="btn btn-primary" onclick="hapusSesstorage()">
+      Hapus sessisonStorage
+    </a> -->
+    <a href="" class="toggle">Dark Mode</a>
     <script>
-      //---------------------------------------------- CONTOH 1 ------------------------------------------------------------------
-      const judul = document.querySelector("h1");
+      // //---------------------------------------------- CONTOH 1 ------------------------------------------------------------------
+      // const judul = document.querySelector("h1");
 
-      //mengambil data yg ada di local storage
-      let localstorage = localStorage.getItem("localstorage");
+      // //mengambil data yg ada di local storage
+      // let localstorage = localStorage.getItem("localstorage");
 
-      if (!localstorage) {
-        localstorage = prompt("Masukkan localstorage : ");
-        //memasukkan data ke localstorage
-        localStorage.setItem("localstorage", localstorage);
+      // if (!localstorage) {
+      //   localstorage = prompt("Masukkan localstorage : ");
+      //   //memasukkan data ke localstorage
+      //   localStorage.setItem("localstorage", localstorage);
+      // }
+
+      // judul.innerHTML = `Halo, ${localstorage}, -> Ketika di reload atau di close tab tidak akan hilang datanya`;
+
+      // //-------------------------------------------------------//
+      // const judul1 = document.querySelector("h2");
+
+      // //mengambil data yg ada di sessionStorage
+      // let sessionstorage = sessionStorage.getItem("sessionstorage");
+
+      // if (!sessionstorage) {
+      //   sessionstorage = prompt("Masukkan sessionstorage : ");
+      //   //memasukkan data ke sessionStorage
+      //   sessionStorage.setItem("sessionstorage", sessionstorage);
+      // }
+
+      // judul1.innerHTML = `Halo, ${sessionstorage}, -> Ketika di close tab akan hilang datanya`;
+
+      // //---------------------------------------------- CONTOH 2 ------------------------------------------------------------------
+
+      // const gantiNama = (a) => {
+      //   localstorage = prompt("Masukkan localstorage baru : ");
+      //   localStorage.setItem("localstorage", localstorage);
+      //   a.preventDefault();
+      // };
+
+      // // Hapus hapuslocstorage
+      // const hapuslocstorage = (b) => {
+      //   localStorage.removeItem("localstorage");
+      //   b.preventDefault();
+      // };
+
+      // // Hapus hapusSesstorage
+      // const hapusSesstorage = (c) => {
+      //   sessionStorage.removeItem("sessionstorage");
+      //   c.preventDefault();
+      // };
+
+      //---------------------------------------------- CONTOH 3 ------------------------------------------------------------------
+      // Dark-Mode
+
+      const toggle = document.querySelector(".toggle");
+      let tema = localStorage.getItem("tema");
+
+      if (!tema) {
+        localStorage.setItem("tema", "light");
       }
 
-      judul.innerHTML = `Halo, ${localstorage}, -> Ketika di reload atau di close tab tidak akan hilang datanya`;
-
-      //-------------------------------------------------------//
-      const judul1 = document.querySelector("h2");
-
-      //mengambil data yg ada di sessionStorage
-      let sessionstorage = sessionStorage.getItem("sessionstorage");
-
-      if (!sessionstorage) {
-        sessionstorage = prompt("Masukkan sessionstorage : ");
-        //memasukkan data ke sessionStorage
-        sessionStorage.setItem("sessionstorage", sessionstorage);
-      }
-
-      judul1.innerHTML = `Halo, ${sessionstorage}, -> Ketika di close tab akan hilang datanya`;
-
-      //---------------------------------------------- CONTOH 2 ------------------------------------------------------------------
-
-      const gantiNama = (e) => {
-        localstorage = prompt("Masukkan localstorage baru : ");
-        localStorage.setItem("localstorage", localstorage);
-        e.preventDefault();
+      const darkMode = () => {
+        //menambahkan class ke body html
+        document.body.classList.add("dark-mode");
+        toggle.innerHTML("Light Mode");
+        localStorage.setItem("tema", "dark");
       };
+
+      toggle.addEventListener("click", (e) => {
+        tema = localStorage.getItem("tema");
+        if (tema === "light") {
+          darkMode();
+        } else {
+          lightMode();
+        }
+        e.preventDefault();
+      });
     </script>
   </body>
 </html>

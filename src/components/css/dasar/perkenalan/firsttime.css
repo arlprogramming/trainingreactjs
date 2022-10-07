@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* font */
+
+h1 {
+  font-size: 100px;
+  color: #fd6542;
+  font-variant: small-caps;
+}
+
+p {
+  font-family: "Courier New", Courier, monospace;
+  font-style: italic;
+  line-height: 1em;
+}
+
+/* secara Shorthands */
+
+#ex {
+  font: italic normal bold 16px/1em "Courier New", Courier, monospace;
+}
+
+/* Text Styling */
+
+/* 
+color => memberi warna
+text-align => mengatur format paragraf/teks
+text-indent => memberi identasi pada paragraf/teks
+text-decoration => mengatur dekorasi pada teks
+text-transform => mengubah jenis huruf kecl ke besar / besar ke kecil
+letter-spacing => mengatur spasi antar huruf
+word-spacing => mengatur spasi antar kata
+*/

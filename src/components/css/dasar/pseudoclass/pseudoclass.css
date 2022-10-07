@@ -1,0 +1,57 @@
+a {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.contohSatu:link {
+  color: rgb(181, 230, 46);
+}
+
+.contohDua:hover {
+  font-size: 24px;
+  color: antiquewhite;
+}
+
+.contohTiga:active {
+  color: brown;
+}
+
+.contohEmpat {
+  color: aqua;
+}
+
+li:first-child a {
+  color: aquamarine;
+}
+
+li:last-child a {
+  color: blueviolet;
+}
+
+/* li:nth-child(2n) a {
+  color: orange;
+} */
+
+/* li:nth-child(3n + 1) a {
+  color: rgb(80, 230, 21);
+} */
+
+/* li:nth-child(even) a {
+  color: rgb(80, 230, 21);
+} */
+
+li:nth-child(odd) a {
+  color: rgb(80, 230, 21);
+}
+
+li:nth-child(odd) a:hover {
+  color: rgb(18, 219, 255);
+}
+
+p:first-of-type {
+  color: bisque;
+}
+
+p:last-of-type {
+  color: brown;
+}

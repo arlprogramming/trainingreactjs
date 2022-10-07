@@ -1,0 +1,19 @@
+p {
+  color: aqua;
+}
+
+p {
+  color: rgb(244, 148, 24);
+}
+
+/* kalau 2 baris seperti ini yang diambil yang paling bawah */
+
+#contohSatu {
+  color: brown;
+}
+
+h3 {
+  color: blueviolet;
+}
+
+/* antara id dan elemen lebih berat id jadi yg digunakan yg id*/
