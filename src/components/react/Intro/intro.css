@@ -1,0 +1,28 @@
+.App-template {
+  width: 1000px;
+  height: 500px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 10px;
+  border-radius: 20px;
+  text-align: left;
+  color: black;
+  background-color: rgb(255, 255, 255);
+}
+
+.content-1 {
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 150px;
+}
+
+.binding {
+  margin: 10px auto;
+}
+
+#rukawa {
+  margin-right: 50px;
+  width: 100px;
+  height: 150px;
+}

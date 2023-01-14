@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+#navigation {
+  margin-bottom: 2rem;
+  /* background-color: aqua; */
+}
+
+#navigation button {
+  margin-right: 1rem;
+}
+
+#slide {
+  border: 1px solid rgb(225, 224, 224);
+  padding: 1rem;
+  min-height: 400px;
+  overflow: scroll;
+  max-height: 250px;
+  white-space: nowrap;
+  /* background-color: antiquewhite; */
+}
+
+button {
+  min-width: 80px;
+}
+
+/* -------------------------------------------Batas CSS Default------------------------------------------- */
+
+.satu {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  background-color: #ff9966;
+  text-align: center;
+  /* ketika line-height valuenya sama dengan height maka element yg ada akan di tengah */
+  line-height: 200px;
+  /* kalau valuenya setengah dari width akan berbentuk bulat sudutnya */
+  /* border-radius: 100px; */
+  /* kiri atas - kanan atas - bawah kanan - kiri bawah */
+  border-radius: 0 50% 0 50%;
+}
